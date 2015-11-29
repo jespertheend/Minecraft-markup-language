@@ -2,7 +2,7 @@
 mcMarkup.py is a simple python script to generate a cube of command blocks from a file of commands
 
 ### Usage ###
-put a file named `input.mcm` in the same folder as `mcMarkup.py`. Run the script, and you're done.
+Put [mcrcon.py](https://github.com/barneygale/MCRcon) in the same folder as this script, put a file named `input.mcm` in the same folder as `mcMarkup.py`. Run the script, and you're done.
 That's all there is, your list of commands will be placed in the world on a clock that is fired every tick.
 Aditional syntax can be used:
 
