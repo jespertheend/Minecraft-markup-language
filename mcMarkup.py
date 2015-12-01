@@ -1,32 +1,19 @@
 import mcrcon
-# import rcon_mc.rcon
-# import rcon_mc.lib.msocket
-# import rcon
 import os
 import sys
 import math
 
 # rcon = mcrcon.MCRcon()
 # rcon.connect("localhost",25575)
-# rcon.login("mijnwachtwoord")
-# server = rcon_mc.rcon.client("localhost",25575, "mijnwachtwoord")
-# server = rcon.RemoteConsole("localhost",25575, "mijnwachtwoord")
+# rcon.login("yourPassword")
 
 START_POS = (0,0,0)
 
 def cmd(cmd):
-	# server.send(cmd)
-	# server.send(cmd)
 	# rcon.command(cmd)
 	cmd = cmd.replace("'","'\"'\"'")
-	# cmds = chunker(cmd,900)
-	# for cmdPart in chunker(cmd, 900):
-	# 	cmdPartEscaped = cmdPart.replace("'","'\"'\"'")
-	# 	os.system("screen -S mc -X stuff '"+cmdPartEscaped+"'")
 	os.system("screen -S mc -X stuff '"+cmd+"'")
 	os.system("screen -S mc -X stuff '\r'")
-	# cmd = "screen -S mc -X stuff '"+cmd+"\r'"
-	# os.system(cmd)
 
 
 def chunker(seq, size):
