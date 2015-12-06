@@ -3,17 +3,20 @@ import os
 import sys
 import math
 
-# rcon = mcrcon.MCRcon()
-# rcon.connect("localhost",25575)
-# rcon.login("yourPassword")
+rcon = mcrcon.MCRcon()
+rcon.connect("localhost",25575)
+rcon.login("yourPassword")
 
 START_POS = (0,0,0)
 
 def cmd(cmd):
-	# rcon.command(cmd)
-	cmd = cmd.replace("'","'\"'\"'")
-	os.system("screen -S mc -X stuff '"+cmd+"'")
-	os.system("screen -S mc -X stuff '\r'")
+	rcon.command(cmd)
+
+	#use this if you want to use gnu screen for some reason
+
+	# cmd = cmd.replace("'","'\"'\"'")
+	# os.system("screen -S mc -X stuff '"+cmd+"'")
+	# os.system("screen -S mc -X stuff '\r'")
 
 
 def chunker(seq, size):
